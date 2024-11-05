@@ -5,5 +5,6 @@ export const bookValidationSchema = Joi.object({
     author: Joi.string().trim().min(1).required(),
     publicationYear: Joi.number().integer().required(),
     isbn: Joi.string().trim().min(1).required(),
+    thumbnail: Joi.required(),
     description: Joi.string().trim().optional()
 });

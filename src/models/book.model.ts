@@ -1,12 +1,6 @@
 import mongoose,{ Schema, Document, model } from "mongoose";
+import { IBook } from "../interfaces/IBook";
 
-interface IBook extends Document {
-    title: string,
-    author: string,
-    publicationYear: number,
-    isbn: string,
-    description?: string;
-}
 
 const bookSchema : Schema = new Schema({
     title: {
@@ -25,6 +19,10 @@ const bookSchema : Schema = new Schema({
         type: String,
         required: true,
         unique: true
+    },
+    thumbnail: {
+        type: String,
+        required: true
     },
     description: {
         type: String

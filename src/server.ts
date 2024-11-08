@@ -16,6 +16,7 @@ const PORT : number = Number(process.env.PORT) || 4001
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+
 const allowedOrigin = process.env.CLIENT_URL as string;
 
 const corsOptions = {

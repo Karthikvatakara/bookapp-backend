@@ -53,7 +53,7 @@ export const searchBooks = async(req: Request, res: Response, next: NextFunction
                 success: false,
                 message: "Search query is required"
             });
-            return; // Just return here, don't return the response object
+            return; 
         }
 
         const books = await elasticsearchService.searchBooks(q as string);
